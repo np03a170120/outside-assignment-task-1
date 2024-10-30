@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -57,12 +57,33 @@
           <li class="nav_item">
             <a href="#">Gifts</a>
           </li>
-          <li class="nav_item">
-            <a href="#">Best Sellers</a>
+          <li class="nav_item single-menu">
+            <p class="single-menu-title">Best Sellers</p>
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
           </li>
         </ul>
       </nav>
     </header>
-    <script ty src="/main.js"></script>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
