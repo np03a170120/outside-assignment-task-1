@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Outside Assignment</title>
     <link rel="stylesheet" href="/sass/main.scss" />
   </head>
 
@@ -14,7 +14,7 @@
         <p class="header_announcement_title">This is a global announcement!</p>
         <img
           class="header_announcement_close_btn"
-          src="./image/icons/close.svg"
+          src="./image/icons/close-announcement.svg"
           alt=""
         />
       </div>
@@ -29,7 +29,10 @@
 
         <ul class="nav_links">
           <li class="nav_item single-menu">
-            <p class="single-menu-title">Best Sellers</p>
+            <div class="single-menu-header">
+              <p class="single-menu-title">Best Sellers</p>
+              <a href="#" class="single-menu-view-all">Shop all</a>
+            </div>
             <div class="swiper mobile">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -74,7 +77,7 @@
           <li class="nav_item">
             <a href="#">The Play Boxes</a>
           </li>
-          <li class="nav_item">
+          <li class="nav_item single-menu close">
             <a href="#">Gifts</a>
           </li>
         </ul>
