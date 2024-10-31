@@ -88,7 +88,7 @@
         align-items: center;
         justify-content: space-between;
         &::after {
-          content: url(../../public/arrow.svg);
+          content: url(/arrow.svg);
         }
       }
       &.single-menu {
