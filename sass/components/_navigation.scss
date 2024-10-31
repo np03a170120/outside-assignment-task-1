@@ -66,9 +66,7 @@
         &.show-links {
           opacity: 1;
           visibility: visible;
-          transition:
-            opacity 0.3s ease-in-out,
-            visibility 0.3s ease-in-out;
+          transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         }
         &.hide-links {
           opacity: 0;
@@ -90,7 +88,7 @@
         align-items: center;
         justify-content: space-between;
         &::after {
-          content: url(../../image/icons/arrow.svg);
+          content: url(../../public/arrow.svg);
         }
       }
       &.single-menu {
@@ -164,9 +162,7 @@
   opacity: 0;
   visibility: hidden;
   position: relative;
-  transition:
-    opacity 0.3s ease-in-out,
-    visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   @media (width < 40em) {
     &.show {
@@ -186,9 +182,7 @@
     &.hide {
       opacity: 0;
       visibility: hidden;
-      transition:
-        opacity 0.3s ease-in-out,
-        visibility 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
 
     &_header {
