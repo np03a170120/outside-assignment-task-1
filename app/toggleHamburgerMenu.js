@@ -1,8 +1,8 @@
 export function toggleHamburgerMenu() {
   const menu = document.querySelector(".nav_links");
   const toggleIcon = document.querySelector("#toggleIcon");
-  const menuIcon = "./image/icons/menu.svg";
-  const crossIcon = "./image/icons/close.svg";
+  const menuIcon = "./public/menu.svg";
+  const crossIcon = "./public/close.svg";
 
   toggleIcon.addEventListener("click", () => {
     if (menu.classList.contains("show-links")) {
