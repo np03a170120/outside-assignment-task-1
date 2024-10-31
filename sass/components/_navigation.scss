@@ -53,9 +53,9 @@
       align-items: center;
       gap: $size-4;
       @media (max-width: 40em) {
-        position: fixed;
+        position: absolute;
         inset: 0;
-        top: 12%;
+        top: 90%;
         margin-left: 0;
         flex-direction: column;
         padding: $size-4;
@@ -66,7 +66,9 @@
         &.show-links {
           opacity: 1;
           visibility: visible;
-          transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+          transition:
+            opacity 0.3s ease-in-out,
+            visibility 0.3s ease-in-out;
         }
         &.hide-links {
           opacity: 0;
@@ -159,6 +161,57 @@
 
 .mega_menu {
   display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+
   @media (width < 40em) {
+    &.show {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      position: fixed;
+      height: 100vh;
+      background: white;
+      z-index: 999;
+      width: 100%;
+      left: 0;
+      top: 0;
+      padding: 1rem;
+    }
+
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 0.3s ease-in-out,
+        visibility 0.3s ease-in-out;
+    }
+
+    &_header {
+      display: flex;
+      gap: $size-5;
+      align-items: center;
+      margin-bottom: 2.75rem;
+    }
+
+    &_title {
+      color: $color-primary-900;
+      font-size: $size-5;
+      font-family: "Roboto";
+      font-weight: 500;
+    }
+
+    &_list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: $size-4;
+      font-weight: $font-weight-light;
+      font-size: $size-4;
+    }
   }
 }
