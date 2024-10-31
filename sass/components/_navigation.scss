@@ -207,6 +207,33 @@
       gap: $size-4;
       font-weight: $font-weight-light;
       font-size: $size-4;
+      margin-bottom: 2rem;
     }
+    &_item {
+      &:last-child {
+        font-style: italic;
+        font-size: 0.875rem;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.featured_item {
+  &_title {
+    font-style: italic;
+    font-size: $size-4;
+    color: $color-primary-900;
+    font-family: "Roboto";
+    font-weight: $font-weight-semi-bold;
+  }
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $size-4;
+  }
+  &_view_all {
+    text-decoration: underline;
   }
 }
