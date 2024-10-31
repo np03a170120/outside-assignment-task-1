@@ -150,6 +150,7 @@
       }
     }
     &_hamburger_menu {
+      z-index: 99999;
       @media (width >= 40em) {
         display: none;
       }

@@ -1,4 +1,4 @@
-export function hideHeaderAnnouncement () {
+export function hideHeaderAnnouncement() {
   const closeBtn = document.querySelector(".header_announcement_close_btn");
   const headerAnnouncement = document.querySelector(".header_announcement");
   if (closeBtn) {
@@ -6,4 +6,4 @@ export function hideHeaderAnnouncement () {
       headerAnnouncement.style.display = "none";
     });
   }
-};
+}
