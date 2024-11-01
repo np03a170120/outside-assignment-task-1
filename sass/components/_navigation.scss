@@ -64,7 +64,9 @@
         visibility: hidden;
         align-items: normal;
         gap: 0;
-        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        transition:
+          opacity 0.3s ease-in-out,
+          visibility 0.3s ease-in-out;
 
         @keyframes slideInFromTop {
           from {
@@ -191,7 +193,9 @@
   opacity: 0;
   visibility: hidden;
   position: relative;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
   overflow: scroll;
   @keyframes slideInLeft {
     from {
@@ -247,6 +251,7 @@
       margin-bottom: 2.75rem;
       position: sticky;
       top: 0;
+      background-color: white;
     }
 
     &_title {
