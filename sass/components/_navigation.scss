@@ -192,7 +192,7 @@
   visibility: hidden;
   position: relative;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-
+  overflow: scroll;
   @keyframes slideInLeft {
     from {
       opacity: 0;
@@ -245,6 +245,8 @@
       gap: $size-5;
       align-items: center;
       margin-bottom: 2.75rem;
+      position: sticky;
+      top: 0;
     }
 
     &_title {
