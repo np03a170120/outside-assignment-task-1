@@ -52,6 +52,7 @@
       display: flex;
       align-items: center;
       gap: $size-4;
+
       @media (max-width: 40em) {
         position: absolute;
         inset: 0;
@@ -63,17 +64,44 @@
         visibility: hidden;
         align-items: normal;
         gap: 0;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+        @keyframes slideInFromTop {
+          from {
+            opacity: 0;
+            transform: translateY(-100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slideOutToTop {
+          from {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          to {
+            opacity: 0;
+            transform: translateY(-100%);
+          }
+        }
+
         &.show-links {
           opacity: 1;
           visibility: visible;
-          transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+          animation: slideInFromTop 0.3s ease-in-out forwards;
         }
+
         &.hide-links {
+          animation: slideOutToTop 0.3s ease-in-out forwards;
           opacity: 0;
           visibility: hidden;
         }
       }
     }
+
     &_item {
       font-style: italic;
       font-size: $font-size-200;
@@ -165,25 +193,51 @@
   position: relative;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOutLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+
+  &.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: slideInLeft 0.3s ease-in-out forwards;
+  }
+
+  &.hide {
+    animation: slideOutLeft 0.3s ease-in-out forwards;
+    opacity: 0;
+    visibility: hidden;
+  }
+
   @media (width < 40em) {
     &.show {
-      display: block;
-      opacity: 1;
-      visibility: visible;
       position: fixed;
       height: 100vh;
       background: white;
       z-index: 999;
       width: 100%;
       left: 0;
-      top: 0;
+      top: -170%;
       padding: 1rem;
-    }
-
-    &.hide {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
 
     &_header {
@@ -209,6 +263,7 @@
       font-size: $size-4;
       margin-bottom: 2rem;
     }
+
     &_item {
       &:last-child {
         font-style: italic;

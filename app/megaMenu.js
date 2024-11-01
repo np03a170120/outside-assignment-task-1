@@ -1,25 +1,32 @@
 export function megaMenu() {
-  const nav_items = document.querySelectorAll(".nav_item");
+  const navItems = document.querySelectorAll(".nav_item");
 
-  nav_items.forEach(function (item) {
+  const toggleMenu = (menu, action) => {
+    action === "show"
+      ? (menu.classList.remove("hide"), menu.classList.add("show"))
+      : (menu.classList.add("hide"),
+        menu.addEventListener(
+          "animationend",
+          () => menu.classList.remove("show", "hide"),
+          { once: true }
+        ));
+  };
+
+  navItems.forEach((item) => {
     const megaMenu = item.querySelector(".mega_menu");
-    const closeButton = megaMenu?.querySelector(".mega_menu_close");
-
-    item.addEventListener("click", function () {
-      document.querySelectorAll(".mega_menu.show").forEach((openMenu) => {
-        openMenu.classList.remove("show");
-      });
-
-      if (megaMenu && !megaMenu.classList.contains("show")) {
-        megaMenu.classList.add("show");
-      }
+    item.addEventListener("click", () => {
+      document
+        .querySelectorAll(".mega_menu.show")
+        .forEach((openMenu) => toggleMenu(openMenu, "hide"));
+      if (megaMenu && !megaMenu.classList.contains("show"))
+        toggleMenu(megaMenu, "show");
     });
 
-    if (closeButton) {
-      closeButton.addEventListener("click", function (event) {
+    megaMenu
+      ?.querySelector(".mega_menu_close")
+      ?.addEventListener("click", (event) => {
         event.stopPropagation();
-        megaMenu.classList.remove("show");
+        toggleMenu(megaMenu, "hide");
       });
-    }
   });
 }
