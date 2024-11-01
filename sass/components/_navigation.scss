@@ -61,12 +61,11 @@
         flex-direction: column;
         padding: $size-4;
         opacity: 0;
-        visibility: hidden;
+        // visibility: hidden;
+        display: none;
         align-items: normal;
         gap: 0;
-        transition:
-          opacity 0.3s ease-in-out,
-          visibility 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
         @keyframes slideInFromTop {
           from {
@@ -92,7 +91,8 @@
 
         &.show-links {
           opacity: 1;
-          visibility: visible;
+          display: block;
+          // visibility: visible;
           animation: slideInFromTop 0.3s ease-in-out forwards;
         }
 
@@ -193,9 +193,7 @@
   opacity: 0;
   visibility: hidden;
   position: relative;
-  transition:
-    opacity 0.3s ease-in-out,
-    visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   overflow: scroll;
   @keyframes slideInLeft {
     from {
