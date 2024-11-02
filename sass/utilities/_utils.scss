@@ -12,3 +12,9 @@
 .pad-t-10 {
   padding-top: 0.625rem !important;
 }
+.flex-only-desktop {
+  @media (width > 40em) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
