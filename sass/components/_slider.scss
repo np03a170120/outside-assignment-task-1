@@ -14,6 +14,9 @@
     height: 100%;
     width: 100%;
     background: #f2f2f2;
+    @media (width>40em) {
+      height: max-content;
+    }
   }
   &.mobile {
     display: none;
@@ -36,6 +39,11 @@
         object-fit: contain;
         width: 100%;
         height: 147.33px;
+
+        @media (width > 40em) {
+          height: 13.75rem;
+          width: 100%;
+        }
       }
       .tag {
         color: #828282;
@@ -47,6 +55,10 @@
         font-style: italic;
         font-weight: 300;
         letter-spacing: 0.3px;
+        @media (width > 40em) {
+          font-size: 1.125rem;
+          color: #0f234c;
+        }
       }
       .wrapper {
         padding: 0 0.625rem 0.625rem;
