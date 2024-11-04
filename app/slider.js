@@ -9,15 +9,12 @@ export const slider = new Swiper(".swiper", {
   breakpoints: {
     640: {
       slidesPerView: 2,
-      spaceBetween: 10,
     },
     768: {
-      slidesPerView: 4,
-      spaceBetween: 10,
+      slidesPerView: 2,
     },
     1024: {
-      slidesPerView: 5,
-      spaceBetween: 10,
+      slidesPerView: 4,
     },
   },
 });
