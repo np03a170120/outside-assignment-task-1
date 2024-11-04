@@ -14,7 +14,7 @@ export const slider = new Swiper(".swiper", {
       slidesPerView: 2,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
   },
 });

@@ -1,0 +1,17 @@
+.badge {
+  border-radius: 100px;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #3057a7;
+  font-size: 0.625rem;
+  height: fit-content;
+  margin-left: -0.5rem;
+  font-style: italic;
+  @media (max-width: 40em) {
+    position: absolute;
+    left: 6.75rem;
+    background: #ecf3ff;
+  }
+}

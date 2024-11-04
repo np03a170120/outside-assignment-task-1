@@ -61,13 +61,10 @@
         flex-direction: column;
         padding: $size-4;
         opacity: 0;
-        // visibility: hidden;
         display: none;
         align-items: normal;
         gap: 0;
-        transition:
-          opacity 0.3s ease-in-out,
-          visibility 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
         @keyframes slideInFromTop {
           from {
@@ -94,7 +91,6 @@
         &.show-links {
           opacity: 1;
           display: block;
-          // visibility: visible;
           animation: slideInFromTop 0.3s ease-in-out forwards;
         }
 
@@ -111,6 +107,12 @@
       font-size: $font-size-200;
       font-weight: $font-weight-light;
       position: relative;
+      display: flex;
+      > a {
+        padding: 0.25rem 0.75rem;
+        border-radius: 100px;
+      }
+
       @media (max-width: 40em) {
         padding: $size-4 0;
         border-bottom: 1px solid #ecf3ff;
@@ -182,26 +184,33 @@
       }
 
       @media (width > 40em) {
+        &:first-child {
+          order: 5;
+        }
         &:hover .mega_menu {
           display: block;
           opacity: 1;
           visibility: visible;
         }
+        &:hover {
+          > a,
+          .badge {
+            background: #ecf3ff;
+          }
+        }
       }
       .mega_menu {
-        display: none;
         opacity: 0;
         visibility: hidden;
         position: relative;
-        transition:
-          opacity 0.3s ease-in-out,
-          visibility 0.3s ease-in-out;
+        transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
         overflow: scroll;
         @media (width > 40em) {
           position: fixed;
           width: 100vw;
-          padding: 4rem 8rem;
+          padding: 6% 8rem;
           left: 0;
+          top: 10%;
           overflow: hidden;
         }
         @keyframes slideInLeft {
@@ -249,10 +258,30 @@
           font-size: 1.125rem;
         }
         &_item {
+          position: relative;
           white-space: nowrap;
           &:last-child {
             font-size: 0.875rem;
             text-decoration: underline;
+          }
+
+          &:after {
+            position: relative;
+            left: 0;
+            transition: left 0.3s ease;
+            visibility: hidden;
+            display: inline-block;
+            margin-left: 1rem;
+            content: url("/hover_element.svg");
+          }
+          &:hover {
+            &:after {
+              visibility: visible;
+              left: 1rem;
+            }
+            a {
+              color: #3057a7;
+            }
           }
         }
         &_title {
@@ -264,6 +293,7 @@
           margin-bottom: $size-6;
         }
         @media (max-width: 40em) {
+          display: none;
           &_close {
             display: block;
           }
@@ -287,6 +317,7 @@
             top: 0;
             background-color: white;
             padding: 0.5rem 0;
+            z-index: 999999;
           }
 
           &_title {
@@ -350,6 +381,9 @@
 
   &_view_all {
     text-decoration: underline;
+    @media (width > 40em) {
+      display: none;
+    }
   }
 
   @media (width> 40em) {
