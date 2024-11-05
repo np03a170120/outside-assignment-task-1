@@ -110,6 +110,7 @@
       font-weight: $font-weight-light;
       display: flex;
       cursor: pointer;
+      text-wrap: nowrap;
       > a {
         padding: 0.25rem 0.75rem;
         border-radius: 100px;
@@ -144,15 +145,25 @@
             top: 50%;
           }
         }
+        &:hover {
+          .single-menu-title {
+            background: #ecf3ff;
+            border-radius: 6.25rem;
+          }
+        }
         .single-menu-title {
           background: white;
           justify-content: flex-start;
           display: block;
           width: 100%;
           font-style: italic;
-
           color: $color-primary-900;
           font-weight: $font-weight-semi-bold;
+          white-space: nowrap;
+          @media (width>40em) {
+            font-weight: $font-weight-light;
+            padding: 0.25rem 0.75rem;
+          }
         }
         .single-menu-view-all {
           white-space: nowrap;
