@@ -40,6 +40,7 @@
   }
   @media (width > 40em) {
     border: 1px solid #eeedeb;
+    position: relative;
   }
   .nav {
     &_logo {
@@ -52,7 +53,6 @@
       display: flex;
       align-items: center;
       gap: $size-4;
-      position: relative;
       z-index: 9999;
 
       @media (max-width: 40em) {
@@ -108,7 +108,6 @@
       font-style: italic;
       font-size: $font-size-200;
       font-weight: $font-weight-light;
-      position: relative;
       display: flex;
       cursor: pointer;
       > a {
@@ -205,18 +204,16 @@
       .mega_menu {
         opacity: 0;
         visibility: hidden;
-        position: relative;
         transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
         overflow: scroll;
         @media (width > 40em) {
-          position: fixed;
+          position: absolute;
           width: 100vw;
-          // padding: 6% 8rem;
-
-          padding: 6% 0 8rem 8rem;
+          padding-left: 8rem;
           left: 0;
-          top: 12%;
+          top: 100%;
           overflow: hidden;
+          padding-top: 3rem;
         }
         @keyframes slideInLeft {
           from {
@@ -414,9 +411,8 @@
     .mega_menu {
       display: flex !important;
       justify-content: space-between;
-      .featured_item {
-        width: 40vw;
-      }
+      overflow-x: scroll !important;
+      gap: 4rem;
     }
     .tab-btn {
       width: 100%;
