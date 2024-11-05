@@ -2,7 +2,10 @@
   margin-bottom: 3rem;
   .nav-tabs {
     display: flex;
-
+    @media (width>40em) {
+      width: fit-content;
+      gap: 1.5rem;
+    }
     .tab-btn {
       flex: 1;
       cursor: pointer;
@@ -14,7 +17,9 @@
       font-size: 1.125rem;
       font-style: italic;
       color: #0f234c;
-
+      @media (width>40em) {
+        white-space: nowrap;
+      }
       &.active {
         border-bottom: 2px solid #3057a7;
         color: #3057a7;
@@ -29,7 +34,7 @@
       margin-top: 2rem;
       &.active {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 7rem 7rem 7rem;
         grid-row-gap: 1.75rem;
       }
 
@@ -45,7 +50,6 @@
           width: max-content;
           margin: auto;
         }
-
         .tab-title {
           font-size: 1rem;
           color: #0f234c;

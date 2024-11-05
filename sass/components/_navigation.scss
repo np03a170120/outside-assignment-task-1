@@ -211,7 +211,9 @@
         @media (width > 40em) {
           position: fixed;
           width: 100vw;
-          padding: 6% 8rem;
+          // padding: 6% 8rem;
+
+          padding: 6% 0 8rem 8rem;
           left: 0;
           top: 12%;
           overflow: hidden;
@@ -259,6 +261,7 @@
           flex-direction: column;
           gap: 1.5rem;
           font-size: 1.125rem;
+          width: fit-content;
         }
         &_item {
           position: relative;
@@ -399,5 +402,24 @@
 
   @media (width > 1440px) {
     margin-left: 0;
+  }
+}
+
+.playbox {
+  @media (width > 40em) {
+    .featured_item {
+      position: static;
+      margin-left: 0;
+    }
+    .mega_menu {
+      display: flex !important;
+      justify-content: space-between;
+      .featured_item {
+        width: 40vw;
+      }
+    }
+    .tab-btn {
+      width: 100%;
+    }
   }
 }
