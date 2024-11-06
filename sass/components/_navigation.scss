@@ -55,8 +55,9 @@
       align-items: center;
       gap: $size-4;
       z-index: 9999;
-
+      overflow-x: scroll;
       @media (max-width: 40em) {
+        overflow: visible;
         position: absolute;
         inset: 0;
         top: 90%;
@@ -392,6 +393,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: $size-4;
+    position: relative;
   }
 
   &_view_all {
@@ -421,7 +423,7 @@
       display: flex !important;
       justify-content: space-between;
       overflow-x: scroll !important;
-      gap: 4rem;
+      gap: 8rem;
     }
     .tab-btn {
       width: 100%;
