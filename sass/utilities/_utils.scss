@@ -12,9 +12,26 @@
 .pad-t-10 {
   padding-top: 0.625rem !important;
 }
-.flex-only-desktop {
+
+.responsive-item {
   @media (width > 40em) {
-    display: flex;
-    justify-content: space-between;
+    .featured_item {
+      position: static;
+      margin-left: 0;
+    }
+    .mega_menu {
+      display: flex !important;
+      justify-content: space-between;
+      gap: 8rem;
+    }
+    .tab-btn {
+      width: 100%;
+    }
+  }
+}
+
+.overflow-tab-scroll {
+  @media (min-width: 48em) and (max-width: 64em) {
+    overflow-x: scroll !important;
   }
 }

@@ -2,7 +2,7 @@ export function toggleHamburgerMenu() {
   const menu = document.querySelector(".nav_links");
   const toggleIcon = document.querySelector("#toggleIcon");
   const megaMenus = document.querySelectorAll(".mega_menu");
-  const [menuIcon, crossIcon] = ["./menu.svg", "./close.svg"];
+  const [menuIcon, crossIcon] = ["./icons/menu.svg", "./icons/close.svg"];
 
   toggleIcon.addEventListener("click", () => {
     const isMenuVisible = menu.classList.toggle(
