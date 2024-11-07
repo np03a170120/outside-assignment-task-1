@@ -8,6 +8,7 @@ body {
   background-color: white;
   line-height: $body-line-height;
   letter-spacing: $body-letter-spaceing;
+  overflow: hidden;
 }
 
 a {
@@ -17,4 +18,21 @@ a {
 
 a:is(:hover, :focus) {
   color: $link-color-hover;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(244, 244, 244);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(204, 204, 204);
 }

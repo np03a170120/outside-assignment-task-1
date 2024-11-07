@@ -2,24 +2,29 @@
   margin-bottom: 3rem;
   .nav-tabs {
     display: flex;
-    @media (width>40em) {
+
+    @media (min-width: 40em) {
       width: fit-content;
+      width: -moz-fit-content;
       gap: 1.5rem;
     }
+
     .tab-btn {
       flex: 1;
       cursor: pointer;
       border: none;
       outline: none;
-      transition: background-color 0.3s;
       background: none;
       font-family: "Roboto Condensed";
       font-size: 1.125rem;
       font-style: italic;
       color: #0f234c;
-      @media (width>40em) {
+      transition: background-color 0.3s;
+
+      @media (min-width: 40em) {
         white-space: nowrap;
       }
+
       &.active {
         border-bottom: 2px solid #3057a7;
         color: #3057a7;
@@ -32,9 +37,10 @@
     .tab-panel {
       display: none;
       margin-top: 2rem;
+
       &.active {
         display: grid;
-        grid-template-columns: 7rem 7rem 7rem;
+        grid-template-columns: repeat(3, 7rem);
         grid-row-gap: 1.75rem;
       }
 
@@ -47,7 +53,7 @@
         img {
           padding: 0.5rem;
           border: 1px solid #eeedeb;
-          border-radius: 100%;
+          border-radius: 50%;
           width: max-content;
           margin: auto;
           transition: border-color 0.2s linear;
